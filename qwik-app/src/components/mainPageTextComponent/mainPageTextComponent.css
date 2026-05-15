@@ -1,0 +1,200 @@
+.mainPage{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+.mainPageArea{
+    width: 70%;
+    height: 100%;
+}
+.mainPageTextArea{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.mainPageStatsArea{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+}
+.headerSpan{
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #5fa8d3,
+        #8cc0eb,
+        #b3d8f2,
+        #7bb6e6,
+        #8cc0eb
+    );
+
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+    text-shadow:
+    0 0 8px rgba(140, 192, 235, 0.4),
+    0 0 16px rgba(140, 192, 235, 0.3),
+    0 0 24px rgba(140, 192, 235, 0.2);
+}
+.text{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.mainPageButtonArea{
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainPageButtonCrypto{
+    width: 10rem;
+    height: 3.2rem;
+
+    border-radius: 2rem;
+    border: none;
+
+    background: linear-gradient(90deg, #5fa8d3, #8cc0eb);
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 20px rgba(140, 192, 235, 0.3);
+
+    transition: 0.3s ease;
+}
+
+#mainPageButtonCrypto:hover{
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 30px rgba(140, 192, 235, 0.45);
+}
+#mainPageButtonRepo{
+    width: 10rem;
+    height: 3.2rem;
+
+    border-radius: 2rem;
+    border: 1px solid rgba(140, 192, 235, 0.4);
+
+    background: transparent;
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+#mainPageButtonRepo:hover{
+    background: rgba(140, 192, 235, 0.1);
+    transform: translateY(-2px);
+}
+
+@media (min-width: 1px) and (max-width: 999px) {
+
+    .mainPage{
+        height: auto;
+        padding: 8rem 0;
+        align-items: start;
+    }
+
+    .mainPageArea{
+        width: 92%;
+    }
+
+    .mainPageTextArea{
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .header{
+        font-size: 2.7rem;
+        line-height: 1.2;
+    }
+
+    .text{
+        width: 100%;
+
+        text-align: center;
+
+        font-size: .95rem;
+        line-height: 1.8;
+    }
+
+    .mainPageButtonArea{
+        flex-direction: column;
+    }
+
+    #mainPageButtonCrypto,
+    #mainPageButtonRepo{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .mainPageStatsArea{
+        margin-top: 3rem;
+
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1299px) {
+
+    .mainPageArea{
+        width: 85%;
+    }
+
+    .header{
+        font-size: 4.5rem;
+        line-height: 1.15;
+    }
+
+    .text{
+        width: 80%;
+        text-align: center;
+    }
+
+    .mainPageStatsArea{
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1535px) {
+
+    .mainPageArea{
+        width: 78%;
+    }
+
+    .header{
+        font-size: 5.3rem;
+    }
+
+    .mainPageStatsArea{
+        gap: 1rem;
+    }
+}
