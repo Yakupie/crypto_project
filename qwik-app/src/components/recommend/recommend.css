@@ -1,0 +1,145 @@
+.recommend {
+    width: 30%;
+    height: 60vh;
+    border: 1px solid rgba(180, 220, 255, 0.12);
+    background-color: transparent;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.recommend::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.recommendTop {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    padding: 1.4rem;
+    gap: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.recommendTopLeft {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 6.2rem;
+    height: 6.2rem;
+    border-radius: 20%;
+    border: 1px solid rgba(180, 220, 255, 0.18);
+    position: relative;
+}
+
+
+.recommendTopRight {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.recommendHeader {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(200, 230, 255, 0.9);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.recommendText {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(200, 220, 240, 0.55);
+}
+
+.recommendBottom {
+    height: 70%;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.recommendBottom::-webkit-scrollbar {
+    width: 5px;
+}
+
+.recommendBottom::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        rgba(140, 192, 235, 0.15),
+        rgba(140, 192, 235, 0.35)
+    );
+    border-radius: 20px;
+}
+
+.recommendBottom::-webkit-scrollbar-thumb:hover {
+    background: rgba(140, 192, 235, 0.5);
+}
+@media (max-width: 1024px) {
+    .recommend {
+        width: 80%;
+        height: 55vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .recommend {
+        width: 92%;
+        height: 60vh;
+        border-radius: 2rem;
+    }
+
+    .recommendHeader {
+        font-size: 1.2rem;
+    }
+
+    .recommendText {
+        font-size: 0.85rem;
+    }
+
+    .photo {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recommend {
+        width: 95%;
+        height: 65vh;
+    }
+
+    .recommendTop {
+        padding: 1rem;
+    }
+
+    .recommendHeader {
+        font-size: 1.05rem;
+    }
+
+    .recommendText {
+        font-size: 0.8rem;
+    }
+
+    .photo {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+}

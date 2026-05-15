@@ -10,8 +10,8 @@ export default component$(() => {
             </div>
             <div class="ulArea">
                 <ul>
-                    <li><a href="a">Ana Sayfa</a></li>
-                    <li><a href="a">Kriptolar</a></li>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li><a href="kriptolar">Kriptolar</a></li>
                     <li><a href="a">Hakkımda</a></li>
                 </ul>
             </div>

@@ -106,7 +106,8 @@
     padding: 2rem 0;
     gap: 2rem;
     animation: menuIn 0.3s ease-out forwards;
-    backdrop-filter: blur(10px);
+    z-index: 99;
+    backdrop-filter: blur(-10px);
 }
 @keyframes menuIn{
     from{

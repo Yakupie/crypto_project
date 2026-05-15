@@ -1,0 +1,150 @@
+.leaderBoard {
+    width: 70%;
+    height: 90%;
+    border-radius: 28px;
+
+    background-color: transparent;
+    border: 1px solid rgba(120, 180, 255, 0.12);
+
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.leaderBoardTop {
+    display: flex;
+    height: 140px;
+    background-color: transparent;
+
+    border-bottom: 1px solid rgba(120, 180, 255, 0.10);
+}
+
+.leaderBoardTopLeft {
+    width: 70%;
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.pillGroup {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 999px;
+
+    border: 1px solid rgba(120, 180, 255, 0.15);
+    background: rgba(120, 180, 255, 0.05);
+
+    color: rgba(180, 210, 255, 0.75);
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.pill:hover {
+    background: rgba(120, 180, 255, 0.10);
+    color: rgba(220, 235, 255, 0.95);
+}
+
+.pill.active {
+    background: rgba(120, 180, 255, 0.18);
+    border-color: rgba(120, 180, 255, 0.35);
+    color: rgba(230, 245, 255, 1);
+    box-shadow: 0 0 18px rgba(120, 180, 255, 0.15);
+}
+
+.myInput {
+    width: 60%;
+    padding: 10px 14px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(120, 180, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+
+    color: rgba(230, 240, 255, 0.9);
+font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.myInput:focus {
+    border-color: rgba(120, 180, 255, 0.35);
+    box-shadow: 0 0 0 3px rgba(120, 180, 255, 0.10);
+}
+
+.leaderBoardTopRight {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeGroup {
+    display: flex;
+    gap: 6px;
+
+    padding: 10px;
+
+    border-radius: 999px;
+
+    background: rgba(120, 180, 255, 0.04);
+    border: 1px solid rgba(120, 180, 255, 0.10);
+    backdrop-filter: blur(10px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.timePill {
+    border: none;
+    outline: none;
+
+    padding: 8px 12px;
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    background: transparent;
+    color: rgba(170, 200, 255, 0.65);
+
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.timePill:hover {
+    background: rgba(120, 180, 255, 0.10);
+    color: rgba(220, 235, 255, 0.95);
+}
+
+.timePill.active {
+    background: rgba(120, 180, 255, 0.22);
+    color: white;
+    border: 1px solid rgba(120, 180, 255, 0.35);
+}
+
+.leaderBoardContent {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    background-color: transparent;
+}
+
+.leaderBoardContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leaderBoardContent::-webkit-scrollbar-thumb {
+    background: rgba(120, 180, 255, 0.18);
+    border-radius: 10px;
+}
