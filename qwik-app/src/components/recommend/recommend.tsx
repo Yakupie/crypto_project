@@ -1,6 +1,5 @@
 import { component$ } from "@builder.io/qwik";
 import { CoinSnippet } from "~/components/snippetComponent/snippetComponent";
-import type { JSX } from "@builder.io/qwik";
 import "./recommend.css";
 
 interface Coin {
