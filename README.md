@@ -4,8 +4,8 @@ Canlı kripto verilerini güncel olarak çeken, onları işleyen ve web sitesind
 Başlangıçta tüm verileri yüklerken hiç sorun çıkartmıyor ve performans sorunlarını ortadan kaldırıyor.
 
 Sitemden bazı görseller : 
-![Foto 1](screenshots/photo1.png)
+<img src="screenshots/photo1.png" width="700"/>
 
-![Foto 2](screenshots/photo2.png)
+<img src="screenshots/photo2.png" width="700"/>
 
-![Foto 3](screenshots/photo3.png)
+<img src="screenshots/photo3.png" width="700"/>
