@@ -15,15 +15,34 @@ export default component$(() => {
   return (
     <QwikCityProvider>
       <head>
-        <meta charset="utf-8" />
-        {!isDev && (
-          <link
-            rel="manifest"
-            href={`${import.meta.env.BASE_URL}manifest.json`}
-          />
-        )}
-        <RouterHead />
-      </head>
+  <meta charset="utf-8" />
+
+  {/* FONT PRELOAD - BURASI */}
+  <link
+    rel="preload"
+    href="/fonts/Montserrat-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin=""
+  />
+
+  <link
+    rel="preload"
+    href="/fonts/OpenSans-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin=""
+  />
+
+  {!isDev && (
+    <link
+      rel="manifest"
+      href={`${import.meta.env.BASE_URL}manifest.json`}
+    />
+  )}
+
+  <RouterHead />
+</head>
       <body lang="en">
         <RouterOutlet />
       </body>
