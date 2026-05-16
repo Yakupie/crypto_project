@@ -1,5 +1,5 @@
 .codeSnippet{
-    width: 8rem;
+    width: 8.5rem;
     height: 2.5rem;
 
     padding: 0 1.2rem;
@@ -42,10 +42,15 @@
 
     color: #8CC0EB;
 }
+.iconArea img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
 
 .snippetText{
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: white;
 
     letter-spacing: 0.03rem;

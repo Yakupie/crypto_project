@@ -11,19 +11,21 @@ export default component$(() => {
                 <div class="aboutMe">
                     <div class="aboutMeLeft">
                         <div class="aboutMeLeftTop">
-                            <div class="photoArea"></div>
+                            <div class="photoArea">
+                                <img src="https://github.com/Yakupie.png"></img>
+                            </div>
                             <div class="photoHeader">Yakup Döğer</div>
                             <div class="photoText">Full-Stack Web Developer</div>
                         </div>
                         <div class="aboutMeLeftBottom">
-                            <CodeSnippet text="HTML" icon=""/>
-                            <CodeSnippet text="CSS" icon=""/>
-                            <CodeSnippet text="JavaScript" icon=""/>
-                            <CodeSnippet text="PHP" icon=""/>
-                            <CodeSnippet text="Svelte" icon=""/>
-                            <CodeSnippet text="Qwik" icon=""/>
-                            <CodeSnippet text="Python" icon=""/>
-                            <CodeSnippet text="C" icon=""/>
+                            <CodeSnippet text="HTML" icon="/images/html.png"/>
+                            <CodeSnippet text="CSS" icon="/images/css.png"/>
+                            <CodeSnippet text="JavaScript" icon="/images/js.png"/>
+                            <CodeSnippet text="PHP" icon="/images/php.png"/>
+                            <CodeSnippet text="Svelte" icon="/images/svelte.png"/>
+                            <CodeSnippet text="Qwik" icon="/images/qwik.png"/>
+                            <CodeSnippet text="Python" icon="/images/python.png"/>
+                            <CodeSnippet text="C" icon="/images/C.png"/>
                         </div>
                     </div>
                     <div class="aboutMeRight">

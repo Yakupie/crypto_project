@@ -1,21 +1,81 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import Navbar from "~/components/navbar/navbar";
 import { RecommendComponent } from "~/components/recommend/recommend";
 import LeaderBoard from "~/components/leaderboard/leaderBoard";
-import './index.css';
+import "./index.css";
 
 export default component$(() => {
-    return(
-        <div class="container">
-            <Navbar/>
-            <div class="bestContainer">
-                <RecommendComponent title="En Çok Kazandıran Coinler" text="Gerçek zamanlı piyasa verileriyle son 24 saatte en yüksek yükselişi gösteren kripto para birimlerini anlık takip edin." icon=""/>
-                <RecommendComponent title="En Popüler Kriptolar" text="Yatırımcıların en çok ilgi gösterdiği, işlem hacmi ve trend verileriyle öne çıkan coinleri keşfedin." icon="" />
-                <RecommendComponent title="Piyasada Öne Çıkanlar" text="Ani fiyat hareketleri, yükselen hacimler ve dikkat çeken performanslarla gündemdeki coinleri kaçırmayın." icon="" />
-            </div>
-            <div class="containerTwo">
-                <LeaderBoard/>
-            </div>
-        </div>
-    )
-})
+
+  const coinsData = useSignal<any>(null);
+  const loading = useSignal(true);
+
+  useVisibleTask$(async () => {
+    const res = await fetch("http://127.0.0.1:8000/coins");
+    const data = await res.json();
+
+    coinsData.value = data;
+    loading.value = false;
+  });
+
+  if (loading.value) {
+    return (
+      <div class="container">
+        <Navbar />
+        <div>Loading...</div>
+      </div>
+    );
+  }
+
+  return (
+    <div class="container">
+      <Navbar />
+
+      <div class="bestContainer">
+
+        {/* 🔥 TOP GAINERS */}
+        <RecommendComponent
+          title="En Çok Kazandıran Coinler"
+          text="Son 24 saatte en yüksek yükseliş"
+          icon="/images/photo1.webp"
+          coins={coinsData.value.top_gainers.map((c: any) => ({
+            name: c.name,
+            price: c.price,
+            degisim: c.change24h,
+            image: c.image
+          }))}
+        />
+
+        {/* 🏦 MARKET CAP */}
+        <RecommendComponent
+          title="En Popüler Kriptolar"
+          text="Market cap’e göre sıralama"
+          icon="/images/photo2.webp"
+          coins={coinsData.value.top_marketcap.map((c: any) => ({
+            name: c.name,
+            price: c.price,
+            degisim: c.change24h,
+            image: c.image
+          }))}
+        />
+
+        {/* ⚡ MOVERS */}
+        <RecommendComponent
+          title="Piyasada Öne Çıkanlar"
+          text="En çok hareket eden coinler"
+          icon="/images/photo3.webp"
+          coins={coinsData.value.top_movers.map((c: any) => ({
+            name: c.name,
+            price: c.price,
+            degisim: c.change24h,
+            image: c.image
+          }))}
+        />
+
+      </div>
+
+      <div class="containerTwo">
+        <LeaderBoard />
+      </div>
+    </div>
+  );
+});

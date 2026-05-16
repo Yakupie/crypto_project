@@ -1,32 +1,52 @@
 import { component$ } from "@builder.io/qwik";
 import { CoinSnippet } from "~/components/snippetComponent/snippetComponent";
-import './recommend.css'
+import type { JSX } from "@builder.io/qwik";
+import "./recommend.css";
 
-interface RecommendProps {
-    title: string;
-    text: string;
-    icon: any;
+interface Coin {
+  name: string;
+  price: number;
+  degisim: number;
+  image: string;
 }
 
-export const RecommendComponent = component$<RecommendProps>(({title , text , icon}) => {
-    return(
-        <div class="recommend">
-            <div class="recommendTop">
-                <div class="recommendTopLeft">
-                    <div class="photo">{icon}</div>
-                </div>
-                <div class="recommendTopRight">
-                    <div class="recommendHeader">{title}</div>
-                    <div class="recommendText">{text}</div>
-                </div>
+interface RecommendProps {
+  title: string;
+  text: string;
+  icon: string;
+  coins: Coin[];
+}
+
+
+export const RecommendComponent = component$<RecommendProps>(
+  ({ title, text, icon, coins }) => {
+    return (
+      <div class="recommend">
+        <div class="recommendTop">
+          <div class="recommendTopLeft">
+            <div class="photo">
+              <img src={icon} alt="recommend icon" />
             </div>
-            <div class="recommendBottom">   
-                <CoinSnippet name="Bitcoin" price={67000} degisim={2.4} icon="" />
-                <CoinSnippet name="Ethereum" price={3500} degisim={-1.2} icon="" />
-                <CoinSnippet name="Solana" price={142} degisim={5.6} icon="" />
-                <CoinSnippet name="XRP" price={0.62} degisim={-0.8} icon="" />
-                <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
-            </div>
+          </div>
+
+          <div class="recommendTopRight">
+            <div class="recommendHeader">{title}</div>
+            <div class="recommendText">{text}</div>
+          </div>
         </div>
-    )
-})
+
+        <div class="recommendBottom">
+          {coins.map((coin) => (
+            <CoinSnippet
+              key={coin.name}
+              name={coin.name}
+              price={coin.price}
+              degisim={coin.degisim}
+              icon={coin.image}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+);

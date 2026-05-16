@@ -77,16 +77,16 @@
 .photoArea{
     width: 9rem;
     height: 9rem;
-
     border-radius: 50%;
-
-    background: linear-gradient(
-        135deg,
-        rgba(140,192,235,0.35),
-        rgba(140,192,235,0.08)
-    );
-
-    border: 1px solid rgba(140,192,235,0.15);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoArea img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .photoHeader{
     font-size: 2.2rem;
@@ -105,20 +105,6 @@
     letter-spacing: 0.04rem;
 
     font-family: 'Open Sans', sans-serif;
-}
-
-.aboutMeRight{
-    width: 60%;
-    height: 100%;
-
-    border-radius: 0rem 3rem 3rem 0rem;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 1.5rem;
-
-    padding: 2rem;
 }
 
 .aboutCard{
@@ -154,8 +140,10 @@
 .banner{
     width: 100%;
     height: 50%;
-    /* BANNER KOYCAM UNUTMA*/
-    background-color: aliceblue;
+    background: url(/images/aboutMe.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 3rem;
 }
 @media (min-width: 1px) and (max-width: 999px){

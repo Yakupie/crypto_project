@@ -1,7 +1,7 @@
 .recommend {
     width: 30%;
     height: 60vh;
-    border: 1px solid rgba(180, 220, 255, 0.12);
+    border: 2px solid rgba(180, 220, 255, 0.12);
     background-color: transparent;
     border-radius: 2.5rem;
     overflow: hidden;
@@ -39,6 +39,12 @@
     border-radius: 20%;
     border: 1px solid rgba(180, 220, 255, 0.18);
     position: relative;
+}
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20%;
 }
 
 
