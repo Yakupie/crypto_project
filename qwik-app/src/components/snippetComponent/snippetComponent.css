@@ -68,7 +68,6 @@
     color: #fb7185;
 }
 
-/* TABLET */
 @media (max-width: 1024px) {
     .coinSnippet {
         height: 18%;
@@ -120,6 +119,7 @@
     .coinSnippet {
         padding: 10px;
         gap: 6px;
+        height: 25%;
     }
 
     .coinName {

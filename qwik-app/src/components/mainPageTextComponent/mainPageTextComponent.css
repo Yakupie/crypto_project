@@ -66,6 +66,13 @@
     justify-content: center;
     align-items: center;
 }
+.mainPageButtonArea a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+}
 #mainPageButtonCrypto{
     width: 10rem;
     height: 3.2rem;
@@ -142,10 +149,10 @@
         line-height: 1.8;
     }
 
-    .mainPageButtonArea{
-        flex-direction: column;
-    }
-
+.mainPageButtonArea a{
+    width: 40%;
+    height: 100%;
+}
     #mainPageButtonCrypto,
     #mainPageButtonRepo{
         width: 100%;
@@ -161,6 +168,7 @@
 
         gap: 1rem;
     }
+    
 }
 
 @media (min-width: 1000px) and (max-width: 1299px) {

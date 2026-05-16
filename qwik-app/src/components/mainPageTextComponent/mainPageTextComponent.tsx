@@ -10,8 +10,12 @@ export default component$(() =>{
                     <div class="header"><span class="headerSpan">Gerçek Zamanlı</span> Kripto Piyasa Takibi</div>
                     <div class="text">Kripto para piyasalarındaki verileri anlık grafiklerle izleyerek profesyonel analiz yapmanıza olanak sağlayan bir platform.</div>
                     <div class="mainPageButtonArea">
+                        <a href="https://github.com/Yakupie/crypto_project">
                         <button id="mainPageButtonRepo">Github Repo</button>
+                        </a>
+                        <a href="/kriptolar">
                         <button id="mainPageButtonCrypto">Kripto Varlıklar</button>
+                        </a>
                     </div>
                 </div>
                 <div class="mainPageStatsArea">

@@ -1,0 +1,378 @@
+.aboutContainer{
+    height: 100%;
+    width: 100%;
+}
+
+.aboutWrapper{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutMe{
+    width: 72%;
+    height: 82%;
+
+    display: flex;
+
+    border-radius: 2.5rem;
+
+    background: rgba(255,255,255,0.02);
+
+    border: 1px solid rgba(140, 192, 235, 0.12);
+
+    backdrop-filter: blur(14px);
+
+    overflow: hidden;
+}
+.aboutMeLeft{
+    width: 38%;
+    height: 100%;
+
+    border-right: 1px solid rgba(140, 192, 235, 0.08);
+
+    display: flex;
+    flex-direction: column;
+}
+.aboutMeRight{
+    width: 62%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 2.5rem;
+
+    box-sizing: border-box;
+}
+.aboutMeLeftTop{
+    height: 42%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.7rem;
+}
+.aboutMeLeftBottom{
+    flex: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-content: flex-start;
+
+    gap: 0.8rem;
+
+    padding: 1.5rem 2rem 2rem 2rem;
+
+    box-sizing: border-box;
+}
+.photoArea{
+    width: 9rem;
+    height: 9rem;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(140,192,235,0.35),
+        rgba(140,192,235,0.08)
+    );
+
+    border: 1px solid rgba(140,192,235,0.15);
+}
+.photoHeader{
+    font-size: 2.2rem;
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 600;
+}
+.photoText{
+    color: rgba(255,255,255,0.55);
+
+    font-size: 0.95rem;
+
+    letter-spacing: 0.04rem;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.aboutMeRight{
+    width: 60%;
+    height: 100%;
+
+    border-radius: 0rem 3rem 3rem 0rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+
+    padding: 2rem;
+}
+
+.aboutCard{
+    width: 100%;
+
+    padding-bottom: 2rem;
+
+    border-bottom: 1px solid rgba(140, 192, 235, 0.08);
+}
+
+.aboutTitle{
+    font-size: 1.8rem;
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    margin-bottom: 1.3rem;
+}
+.aboutDescription{
+    width: 95%;
+
+    color: rgba(255,255,255,0.68);
+
+    font-size: 1rem;
+
+    line-height: 2rem;
+
+    font-family: 'Open Sans', sans-serif;
+
+    letter-spacing: 0.02rem;
+}
+.banner{
+    width: 100%;
+    height: 50%;
+    /* BANNER KOYCAM UNUTMA*/
+    background-color: aliceblue;
+    border-radius: 3rem;
+}
+@media (min-width: 1px) and (max-width: 999px){
+
+    .aboutWrapper{
+        height: auto;
+
+        padding: 2rem 0 4rem 0;
+    }
+
+    .aboutMe{
+        width: 95%;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem 1.2rem;
+
+        gap: 2rem;
+
+        box-sizing: border-box;
+
+        min-height: auto;
+    }
+
+    .aboutMeLeft{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 2rem;
+    }
+
+    .aboutMeLeftTop{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 0.7rem;
+    }
+
+    .photoArea{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .photoHeader{
+        font-size: 2rem;
+
+        text-align: center;
+    }
+
+    .photoText{
+        font-size: 0.95rem;
+
+        text-align: center;
+    }
+
+    .aboutMeLeftBottom{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-content: center;
+
+        gap: 0.8rem;
+
+        padding: 0;
+    }
+
+    .aboutMeRight{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+    }
+
+    .aboutCard{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding-bottom: 2rem;
+    }
+
+    .aboutTitle{
+        font-size: 1.8rem;
+
+        text-align: center;
+    }
+
+    .aboutDescription{
+        width: 100%;
+
+        font-size: 0.95rem;
+
+        line-height: 1.9rem;
+
+        text-align: center;
+    }
+
+    .banner{
+        width: 100%;
+        min-height: 10rem;
+
+        border-radius: 1.5rem;
+        border: 1px solid rgba(140,192,235,0.12);
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1299px){
+
+    .aboutWrapper{
+        height: auto;
+
+        padding: 3rem 0;
+    }
+
+    .aboutMe{
+        width: 85%;
+
+        min-height: 60rem;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+
+        gap: 2rem;
+
+        box-sizing: border-box;
+    }
+
+    .aboutMeLeft{
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        gap: 2rem;
+    }
+
+    .aboutMeLeftTop{
+        width: 40%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutMeLeftBottom{
+        width: 60%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-content: center;
+
+        gap: 1rem;
+
+        padding: 1rem;
+    }
+
+    .aboutMeRight{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+    }
+
+    .aboutCard{
+        width: 100%;
+
+        height: auto;
+    }
+
+    .banner{
+        width: 100%;
+
+        min-height: 12rem;
+
+        border-radius: 2rem;
+
+        border: 1px solid rgba(140,192,235,0.12);
+    }
+}
+@media (min-width: 1300px) and (max-width: 1535px) {
+    .aboutCard{
+        height: 80%;
+    }
+    .aboutDescription{
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1536px) {
+}

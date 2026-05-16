@@ -1,0 +1,52 @@
+.codeSnippet{
+    width: 8rem;
+    height: 2.5rem;
+
+    padding: 0 1.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    border-radius: 999px;
+
+    background: rgba(140, 192, 235, 0.05);
+
+    border: 1px solid rgba(140, 192, 235, 0.25);
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.25s ease;
+
+    box-shadow: 
+        0 0 15px rgba(140, 192, 235, 0.08);
+
+    user-select: none;
+}
+
+.codeSnippet:hover{
+    transform: translateY(-2px);
+
+    border: 1px solid rgba(140, 192, 235, 0.45);
+
+    background: rgba(140, 192, 235, 0.08);
+
+    box-shadow: 
+        0 0 20px rgba(140, 192, 235, 0.15);
+}
+
+.iconArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #8CC0EB;
+}
+
+.snippetText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+
+    letter-spacing: 0.03rem;
+}

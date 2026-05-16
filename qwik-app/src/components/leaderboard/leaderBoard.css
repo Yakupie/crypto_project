@@ -148,3 +148,60 @@ font-family: 'Montserrat', sans-serif;
     background: rgba(120, 180, 255, 0.18);
     border-radius: 10px;
 }
+@media (min-width: 1px) and (max-width: 620px) {
+    .leaderBoardTop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 30%;
+    }
+    .leaderBoardTopLeft{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .myInput{
+        width: 90%;
+    }
+    .leaderBoardTopRight{
+        width: 100%;
+    }
+    .leaderBoardContent{
+        height: 70%;
+    }
+    .pillGroup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .leaderBoard{
+        width: 90%;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 1299px) {
+    .leaderBoardTop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 30%;
+    }
+    .leaderBoardTopLeft{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .myInput{
+        width: 80%;
+    }
+    .leaderBoardTopRight{
+        width: 100%;
+    }
+    .leaderBoardContent{
+        height: 70%;
+    }
+}

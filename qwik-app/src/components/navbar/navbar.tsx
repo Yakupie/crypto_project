@@ -11,12 +11,14 @@ export default component$(() => {
             <div class="ulArea">
                 <ul>
                     <li><a href="/">Ana Sayfa</a></li>
-                    <li><a href="kriptolar">Kriptolar</a></li>
-                    <li><a href="a">Hakkımda</a></li>
+                    <li><a href="/kriptolar">Kriptolar</a></li>
+                    <li><a href="/hakkimda">Hakkımda</a></li>
                 </ul>
             </div>
             <div class="buttonArea">
+              <a href="https://github.com/Yakupie" target="_blank">
                 <button id="githubButton"><GithubIcon /> Github</button>
+              </a>
             </div>
             <div class="hamburgerMenuArea">
                 <button id="hamburgerMenu" onClick$={() => (isOpen.value = !isOpen.value)}>
@@ -32,10 +34,12 @@ export default component$(() => {
                     </div>
                     <ul>
                         <li><a href="/">Ana Sayfa</a></li>
-                        <li><a href="/">Kriptolar</a></li>
-                        <li><a href="/">Hakkımda</a></li>
+                        <li><a href="/kriptolar">Kriptolar</a></li>
+                        <li><a href="/hakkimda">Hakkımda</a></li>
                     </ul>
-                    <button id="hamburgerMenuButton"><GithubIcon /> Github</button>
+                    <a href="https://github.com/Yakupie" target="_blank">
+                      <button id="hamburgerMenuButton"><GithubIcon /> Github</button>
+                    </a>
                 </div>
             )}
         </div>

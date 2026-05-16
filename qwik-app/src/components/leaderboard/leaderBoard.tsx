@@ -36,12 +36,12 @@ export default component$(() => {
       </div>
 
       <div class="leaderBoardContent">
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
-        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="/icons/ada.svg" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
+        <CoinSnippet name="Cardano" price={0.45} degisim={1.1} icon="" />
       </div>
 
     </div>
