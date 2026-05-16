@@ -1,144 +1,163 @@
+
 .leaderBoard {
-    width: 70%;
-    height: 90%;
+    width: 72%;
+    height: 92%;
     border-radius: 28px;
 
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(120, 180, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
+    border: 1px solid rgba(120, 180, 255, 0.12);
 
     display: flex;
     flex-direction: column;
 
     overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 .leaderBoardTop {
     display: flex;
-    height: 140px;
-    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 22px;
 
     border-bottom: 1px solid rgba(120, 180, 255, 0.10);
+
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.01)
+    );
 }
 
 .leaderBoardTopLeft {
-    width: 70%;
-    padding: 18px;
+    width: 23%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 .pillGroup {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .pill {
-    padding: 12px 20px;
-    font-family: 'Montserrat', sans-serif;
+    padding: 10px 16px;
+
     border-radius: 999px;
 
-    border: 1px solid rgba(120, 180, 255, 0.15);
-    background: rgba(120, 180, 255, 0.05);
+    border: 1px solid rgba(120, 180, 255, 0.14);
+    background: rgba(120, 180, 255, 0.06);
 
-    color: rgba(180, 210, 255, 0.75);
+    color: rgba(200, 220, 255, 0.75);
+
     font-size: 12px;
+    font-family: "Montserrat", sans-serif;
 
     cursor: pointer;
-    transition: 0.2s ease;
+
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
 .pill:hover {
-    background: rgba(120, 180, 255, 0.10);
-    color: rgba(220, 235, 255, 0.95);
+    transform: translateY(-1px);
+    background: rgba(120, 180, 255, 0.12);
+    color: rgba(240, 245, 255, 0.95);
 }
 
 .pill.active {
-    background: rgba(120, 180, 255, 0.18);
+    background: rgba(120, 180, 255, 0.22);
     border-color: rgba(120, 180, 255, 0.35);
-    color: rgba(230, 245, 255, 1);
-    box-shadow: 0 0 18px rgba(120, 180, 255, 0.15);
-}
+    color: white;
 
+    box-shadow: 0 0 18px rgba(120, 180, 255, 0.18);
+}
 .myInput {
-    width: 60%;
-    padding: 10px 14px;
+    width: 90%;
+
+    padding: 12px 14px;
 
     border-radius: 14px;
 
     border: 1px solid rgba(120, 180, 255, 0.12);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.04);
 
-    color: rgba(230, 240, 255, 0.9);
-font-family: 'Montserrat', sans-serif;
+    color: rgba(235, 245, 255, 0.9);
+
+    font-family: "Montserrat", sans-serif;
+
     outline: none;
-    transition: 0.2s ease;
+
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+}
+
+.myInput::placeholder {
+    color: rgba(200, 210, 255, 0.45);
 }
 
 .myInput:focus {
     border-color: rgba(120, 180, 255, 0.35);
-    box-shadow: 0 0 0 3px rgba(120, 180, 255, 0.10);
+    box-shadow: 0 0 0 3px rgba(120, 180, 255, 0.12);
 }
 
 .leaderBoardTopRight {
-    width: 30%;
+    width: 77%;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.timeGroup {
-    display: flex;
-    gap: 6px;
+.tableHeaderRow {
+    width: 100%;
 
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
 
-    border-radius: 999px;
+    padding: 14px 18px;
 
-    background: rgba(120, 180, 255, 0.04);
+    border-radius: 500px;
+
+    background: rgba(120, 180, 255, 0.01);
     border: 1px solid rgba(120, 180, 255, 0.10);
-    backdrop-filter: blur(10px);
-    font-family: 'Montserrat', sans-serif;
-}
 
-.timePill {
-    border: none;
-    outline: none;
-
-    padding: 8px 12px;
-    border-radius: 999px;
-
+    font-family: "Montserrat", sans-serif;
     font-size: 12px;
 
-    background: transparent;
-    color: rgba(170, 200, 255, 0.65);
+    color: rgba(190, 210, 255, 0.75);
 
-    cursor: pointer;
-    transition: 0.2s ease;
-    font-family: 'Montserrat', sans-serif;
+    backdrop-filter: blur(12px);
 }
 
-.timePill:hover {
-    background: rgba(120, 180, 255, 0.10);
-    color: rgba(220, 235, 255, 0.95);
-}
-
-.timePill.active {
-    background: rgba(120, 180, 255, 0.22);
-    color: white;
-    border: 1px solid rgba(120, 180, 255, 0.35);
+.th {
+    text-align: center;
+    white-space: nowrap;
 }
 
 .leaderBoardContent {
     flex: 1;
-    padding: 18px;
+
+    padding: 16px 18px;
+
     overflow-y: auto;
-    background-color: transparent;
+    overflow-x: hidden;
+
+    background: transparent;
 }
+
+.leaderBoardContent {
+    scroll-behavior: smooth;
+}
+
 
 .leaderBoardContent::-webkit-scrollbar {
     width: 6px;
@@ -146,90 +165,78 @@ font-family: 'Montserrat', sans-serif;
 
 .leaderBoardContent::-webkit-scrollbar-thumb {
     background: rgba(120, 180, 255, 0.18);
-    border-radius: 10px;
-}
-@media (min-width: 1px) and (max-width: 620px) {
-    .leaderBoardTop{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 30%;
-    }
-    .leaderBoardTopLeft{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .myInput{
-        width: 90%;
-    }
-    .leaderBoardTopRight{
-        width: 100%;
-    }
-    .leaderBoardContent{
-        height: 70%;
-    }
-    .pillGroup{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .leaderBoard{
-        width: 90%;
-    }
+    border-radius: 999px;
 }
 
-@media (min-width: 620px) and (max-width: 1299px) {
-    .leaderBoardTop{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 30%;
-    }
-    .leaderBoardTopLeft{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .myInput{
-        width: 80%;
-    }
-    .leaderBoardTopRight{
-        width: 100%;
-    }
-    .leaderBoardContent{
-        height: 70%;
-    }
+.leaderBoardContent::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 180, 255, 0.35);
 }
+
 ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: rgba(40, 40, 48, 0.85);
-
+    background: rgba(30, 30, 40, 0.8);
     border-radius: 999px;
-
-    border: 1px solid rgba(255,255,255,0.04);
-
-    transition: 0.25s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(5, 5, 8, 0.96);
-
-    box-shadow:
-        0 0 10px rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.85);
 }
 
-::-webkit-scrollbar-thumb:active {
-    background: rgba(0,0,0,1);
+@media (max-width: 620px) {
+    .leaderBoard {
+        width: 94%;
+        height: 95%;
+    }
+
+    .leaderBoardTop {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .leaderBoardTopLeft,
+    .leaderBoardTopRight {
+        width: 100%;
+    }
+
+    .myInput {
+        width: 100%;
+    }
+
+    .pillGroup {
+        justify-content: center;
+    }
+
+    .tableHeaderRow {
+        font-size: 10px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 621px) and (max-width: 1299px) {
+    .leaderBoard {
+        width: 90%;
+    }
+
+    .leaderBoardTop {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .leaderBoardTopLeft,
+    .leaderBoardTopRight {
+        width: 100%;
+    }
+
+    .myInput {
+        width: 85%;
+    }
 }

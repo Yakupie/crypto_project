@@ -11,7 +11,6 @@ export default component$((props: { coins: any[] }) => {
 
     let result = props.coins ?? [];
 
-    // SEARCH
     if (search.value.trim()) {
 
       const q = search.value.toLowerCase();
@@ -22,7 +21,6 @@ export default component$((props: { coins: any[] }) => {
 
     }
 
-    // SORT ASC
     if (sort.value === "asc") {
 
       result = [...result].sort(
@@ -31,7 +29,6 @@ export default component$((props: { coins: any[] }) => {
 
     }
 
-    // SORT DESC
     if (sort.value === "desc") {
 
       result = [...result].sort(
@@ -40,7 +37,6 @@ export default component$((props: { coins: any[] }) => {
 
     }
 
-    // SORT POPULAR
     if (sort.value === "popular") {
 
       result = [...result].sort(
@@ -99,37 +95,15 @@ export default component$((props: { coins: any[] }) => {
 
         </div>
 
-        <div class="leaderBoardTopRight">
-
-          <div class="timeGroup">
-
-            <button aria-label="1 Gün" class="timePill active">
-              1G
-            </button>
-
-            <button aria-label="1 Hafta" class="timePill">
-              1H
-            </button>
-
-            <button aria-label="1 Ay" class="timePill">
-              1A
-            </button>
-
-            <button aria-label="3 Ay" class="timePill">
-              3A
-            </button>
-
-            <button aria-label="1 Yıl" class="timePill">
-              1Y
-            </button>
-
-            <button aria-label="5 Yıl" class="timePill">
-              5Y
-            </button>
-
-          </div>
-
-        </div>
+ <div class="leaderBoardTopRight">
+  <div class="tableHeaderRow">
+    <div class="th">Fiyat</div>
+    <div class="th">Change</div>
+    <div class="th">Vol</div>
+    <div class="th">Market Cap</div>
+    <div class="th">P/E</div>
+  </div>
+</div>
 
       </div>
 

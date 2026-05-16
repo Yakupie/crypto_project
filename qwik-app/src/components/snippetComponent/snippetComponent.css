@@ -1,11 +1,11 @@
 .coinSnippet {
     width: 100%;
     min-height: 70px;
-    padding: 0.5rem;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr 1fr;
+
     align-items: center;
-    justify-content: space-between;
 
     padding: 0 12px;
 
@@ -13,11 +13,27 @@
 
     background-color: transparent;
     border: 1px solid rgba(140,192,235,0.08);
-
-
 }
 
+.coinLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.coinCell {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #cfe3ff;
+}
 
+.coinCell.up {
+    color: #4ade80;
+}
+
+.coinCell.down {
+    color: #fb7185;
+}
 .coinIcon {
     width: 32px;
     height: 32px;
