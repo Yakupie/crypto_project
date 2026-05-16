@@ -76,6 +76,8 @@
     color: white;
     box-shadow: 0px 0px 20px #316188;
     transition: 0.3s ease-in-out;
+    min-width: 48px;
+    min-height: 48px;
 }
 #githubButton:hover{
     transform: scale(1.1);
