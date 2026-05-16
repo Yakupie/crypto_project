@@ -35,16 +35,20 @@
         0 0 20px rgba(140, 192, 235, 0.15);
 }
 
-.iconArea{
+.iconArea {
+    width: 18px;
+    height: 18px;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: #8CC0EB;
+    flex-shrink: 0;
 }
 .iconArea img {
   width: 18px;
-  height: 18px;
+  height: auto;
+  max-height: 18px;
   object-fit: contain;
 }
 

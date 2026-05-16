@@ -1,6 +1,7 @@
 .coinSnippet {
     width: 100%;
-    height: 20%;
+    min-height: 70px;
+    padding: 0.5rem;
 
     display: flex;
     align-items: center;
