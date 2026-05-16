@@ -24,7 +24,7 @@ export const RecommendComponent = component$<RecommendProps>(
         <div class="recommendTop">
           <div class="recommendTopLeft">
             <div class="photo">
-              <img src={icon} alt="recommend icon" />
+              <img src={icon} alt="recommend icon" loading="lazy" decoding="async" width={18} height={18}></img>
             </div>
           </div>
 
