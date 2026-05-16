@@ -39,3 +39,31 @@
         padding: 1rem;
     }
 }
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(40, 40, 48, 0.85);
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,255,255,0.04);
+
+    transition: 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(5, 5, 8, 0.96);
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.45);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,1);
+}

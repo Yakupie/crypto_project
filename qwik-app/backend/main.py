@@ -35,12 +35,11 @@ def fetch_coins():
     data = response.json()
 
     return [{
-        "id": c.get("id"),
         "name": c.get("name"),
         "symbol": c.get("symbol"),
         "price": c.get("current_price"),
         "image": c.get("image"),
-        "change24h": c.get("price_change_percentage_24h"),
+        "change24h": round(c.get("price_change_percentage_24h") or 0, 2),
         "marketCap": c.get("market_cap"),
         "marketCapRank": c.get("market_cap_rank"),
     } for c in data]

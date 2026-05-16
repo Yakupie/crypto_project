@@ -72,7 +72,7 @@
     gap: 0.5rem;
     cursor: pointer;
     border: none;
-    background-color: #316188;
+    background: linear-gradient(90deg, #5fa8d3, #8cc0eb);
     color: white;
     box-shadow: 0px 0px 20px #316188;
     transition: 0.3s ease-in-out;

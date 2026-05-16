@@ -1,8 +1,8 @@
 .recommend {
     width: 30%;
     height: 60vh;
-    border: 2px solid rgba(180, 220, 255, 0.12);
-    background-color: transparent;
+background: rgba(255,255,255,0.005);
+    border: 1px solid rgba(140, 192, 235, 0.12);
     border-radius: 2.5rem;
     overflow: hidden;
     position: relative;
@@ -61,11 +61,10 @@
 }
 
 .recommendHeader {
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(200, 230, 255, 0.9);
     font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.4px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-size: 300% 100%;
 }
 
 .recommendText {
