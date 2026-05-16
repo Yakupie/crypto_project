@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import { CoinSnippet } from "~/components/snippetComponent/snippetComponent";
+import { MiniCoinSnippet } from "~/components/miniCoinSnippet/miniCoinSnippet";
 import "./recommend.css";
 
 interface Coin {
@@ -36,7 +36,7 @@ export const RecommendComponent = component$<RecommendProps>(
 
         <div class="recommendBottom">
           {coins.map((coin) => (
-            <CoinSnippet
+            <MiniCoinSnippet
               key={coin.name}
               name={coin.name}
               price={coin.price}
