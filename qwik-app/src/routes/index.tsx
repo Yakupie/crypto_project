@@ -40,7 +40,9 @@ export default component$(() => {
       ></div>
 
       <Navbar/>
+      <div class="containerIndex">
       <MainPageTextComponent/>
+      </div>
 
     </div>
   );

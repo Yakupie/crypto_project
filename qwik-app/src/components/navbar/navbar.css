@@ -5,7 +5,10 @@
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    z-index: 9999;
+
+    position: relative;
+    top: 30;
+    z-index: 10000;
 }
 
 .logoArea{
@@ -104,11 +107,11 @@
 
 
 .mobileMenu{
-    position: fixed;
+    position: relative;
     top: 0vh;
     right: 0;
-    width: 60%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     background: linear-gradient(
     180deg,
     #070611 0%,
@@ -122,7 +125,7 @@
     padding: 2rem 0;
     gap: 2rem;
     animation: menuIn 0.3s ease-out forwards;
-    z-index: 10000;
+    z-index: 99999;
 }
 @keyframes menuIn{
     from{
@@ -140,6 +143,8 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+    width: 100%;
+    height: 60%;
 }
 .mobileMenu ul li a{
     color: white;
@@ -148,35 +153,46 @@
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.05rem;
 }
-#hamburgerMenuButton{
+.buttonA{
+    height: 40%;
+}
+#hamburgerMenuButton {
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 90%;
-    height: 7%;
-    border-radius: 2rem;
+    min-height: 20px;   /* 👈 önemli */
+    padding: 1rem 1.2rem;
+
+    border-radius: 18px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
-    gap: 0.5rem;
+
+    gap: 0.7rem;
     cursor: pointer;
+
     border: none;
     background-color: #8CC0EB;
     color: white;
-    box-shadow: 0px 0px 20px #8CC0EB;
-    transition: 0.3s ease-in-out;
+
+    box-shadow: 0px 0px 20px rgba(140, 192, 235, 0.6);
+    transition: 0.25s ease-in-out;
 }
-#hamburgerMenuOpen{
-    background-color: transparent;
-    border: none;
-    color: white;
-    margin-right: 2rem;
+
+#hamburgerMenuButton:hover {
+    transform: scale(1.03);
 }
-.hamburgerMenuOpenArea{
-    width: 100%;
-    height: 5%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+#hamburgerMenu {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#hamburgerMenu:active {
+  transform: scale(0.9);
 }
 
 @media (min-width: 1px) and (max-width: 999px) {

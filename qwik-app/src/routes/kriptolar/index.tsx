@@ -11,13 +11,11 @@ export default component$(() => {
 
   useVisibleTask$(async () => {
     const res = await fetch("https://cryptoproject-production-0c1f.up.railway.app/coins");
-    const data = await res.json();
-
-    coinsData.value = data;
+    coinsData.value = await res.json();
     loading.value = false;
   });
 
-  if (loading.value) {
+  if (loading.value || !coinsData.value) {
     return (
       <div class="container">
         <Navbar />
@@ -25,6 +23,8 @@ export default component$(() => {
       </div>
     );
   }
+
+  const data = coinsData.value;
 
   return (
     <div class="container">
@@ -36,10 +36,11 @@ export default component$(() => {
           title="En Çok Kazandıran Coinler"
           text="Son 24 saatte en yüksek yükseliş"
           icon="/images/photo1.webp"
-          coins={coinsData.value.top_gainers.map((c: any) => ({
+          coins={(data.top_gainers ?? []).map((c: any) => ({
+            id: c.id,
             name: c.name,
             price: c.price,
-            degisim: c.change24h,
+            degisim: c.change24h ?? 0,
             image: c.image
           }))}
         />
@@ -48,22 +49,24 @@ export default component$(() => {
           title="En Popüler Kriptolar"
           text="Market cap’e göre sıralama"
           icon="/images/photo2.webp"
-          coins={coinsData.value.top_marketcap.map((c: any) => ({
+          coins={(data.top_marketcap ?? []).map((c: any) => ({
+            id: c.id,
             name: c.name,
             price: c.price,
-            degisim: c.change24h,
+            degisim: c.change24h ?? 0,
             image: c.image
           }))}
         />
 
         <RecommendComponent
-          title="Piyasada Öne Çıkanlar"
-          text="En çok hareket eden coinler"
+          title="En Çok Değişen Coinler"
+          text="24 saatte en volatil coinler"
           icon="/images/photo3.webp"
-          coins={coinsData.value.top_movers.map((c: any) => ({
+          coins={(data.top_movers ?? []).map((c: any) => ({
+            id: c.id,
             name: c.name,
             price: c.price,
-            degisim: c.change24h,
+            degisim: c.change24h ?? 0,
             image: c.image
           }))}
         />
@@ -71,7 +74,7 @@ export default component$(() => {
       </div>
 
       <div class="containerTwo">
-        <LeaderBoard />
+        <LeaderBoard coins={data.all ?? []} />
       </div>
     </div>
   );

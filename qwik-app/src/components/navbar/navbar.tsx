@@ -1,50 +1,63 @@
 import { component$, useSignal } from "@builder.io/qwik";
-import './navbar.css';
+import "./navbar.css";
 
 export default component$(() => {
-    const isOpen = useSignal(false);
-    return(
-        <div class="navbar">
-            <div class="logoArea">
-                <div class="logo">Crypto<span id="logoSpan">Stats</span></div>
-            </div>
-            <div class="ulArea">
-                <ul>
-                    <li><a href="/">Ana Sayfa</a></li>
-                    <li><a href="/kriptolar">Kriptolar</a></li>
-                    <li><a href="/hakkimda">Hakkımda</a></li>
-                </ul>
-            </div>
-            <div class="buttonArea">
-              <a href="https://github.com/Yakupie" target="_blank">
-                <button id="githubButton"><GithubIcon /> Github</button>
-              </a>
-            </div>
-            <div class="hamburgerMenuArea">
-                <button id="hamburgerMenu" onClick$={() => (isOpen.value = !isOpen.value)}>
-                    <MenuIcon />
-                </button>
-            </div>
-            {isOpen.value &&(
-                <div class="mobileMenu">
-                    <div class="hamburgerMenuOpenArea">
-                        <button id="hamburgerMenuOpen" onClick$={() => (isOpen.value = !isOpen.value)}>
-                            <CloseIcon />
-                        </button>
-                    </div>
-                    <ul>
-                        <li><a href="/">Ana Sayfa</a></li>
-                        <li><a href="/kriptolar">Kriptolar</a></li>
-                        <li><a href="/hakkimda">Hakkımda</a></li>
-                    </ul>
-                    <a href="https://github.com/Yakupie" target="_blank">
-                      <button id="hamburgerMenuButton"><GithubIcon /> Github</button>
-                    </a>
-                </div>
-            )}
+  const isOpen = useSignal(false);
+
+  return (
+    <>
+      <div class="navbar">
+        <div class="logoArea">
+          <div class="logo">
+            Crypto<span id="logoSpan">Stats</span>
+          </div>
         </div>
-    )
-})
+
+        <div class="ulArea">
+          <ul>
+            <li><a href="/">Ana Sayfa</a></li>
+            <li><a href="/kriptolar">Kriptolar</a></li>
+            <li><a href="/hakkimda">Hakkımda</a></li>
+          </ul>
+        </div>
+
+        <div class="buttonArea">
+          <a href="https://github.com/Yakupie" target="_blank">
+            <button id="githubButton">
+              <GithubIcon /> Github
+            </button>
+          </a>
+        </div>
+
+<div class="hamburgerMenuArea">
+  <button
+    id="hamburgerMenu"
+    onClick$={() => (isOpen.value = !isOpen.value)}
+  >
+    {isOpen.value ? <CloseIcon /> : <MenuIcon />}
+  </button>
+</div>
+      </div>
+
+      {isOpen.value && (
+        <div class="mobileMenu">
+
+          <ul>
+            <li><a href="/">Ana Sayfa</a></li>
+            <li><a href="/kriptolar">Kriptolar</a></li>
+            <li><a href="/hakkimda">Hakkımda</a></li>
+          </ul>
+
+          <a class="buttonA" href="https://github.com/Yakupie" target="_blank">
+            <button id="hamburgerMenuButton">
+              <GithubIcon /> Github
+            </button>
+          </a>
+        </div>
+      )}
+    </>
+  );
+});
 
 export const GithubIcon = () => {
   return (
