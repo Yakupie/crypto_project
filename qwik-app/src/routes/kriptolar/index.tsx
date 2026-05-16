@@ -10,7 +10,7 @@ export default component$(() => {
   const loading = useSignal(true);
 
   useVisibleTask$(async () => {
-    const res = await fetch("https://crypto-project-gpfr.onrender.com/coins");
+    const res = await fetch("https://cryptoproject-production-0c1f.up.railway.app/coins");
     const data = await res.json();
 
     coinsData.value = data;

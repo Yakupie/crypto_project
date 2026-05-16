@@ -8,7 +8,7 @@ export default component$(() => {
   const sort = useSignal("asc");
 
   useVisibleTask$(async () => {
-    const res = await fetch("https://crypto-project-gpfr.onrender.com/coins");
+    const res = await fetch("https://cryptoproject-production-0c1f.up.railway.app/coins");
     const data = await res.json();
     coins.value = data.all;
   });
