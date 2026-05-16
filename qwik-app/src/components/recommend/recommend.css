@@ -25,65 +25,8 @@
     0 0 30px rgba(0,0,0,0.95),
     inset 0 1px 0 rgba(255,255,255,0.1);
 
-    transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border 0.35s ease;
 }
 
-.recommend::before{
-    content: "";
-
-    position: absolute;
-
-    width: 22rem;
-    height: 22rem;
-
-    top: -12rem;
-    right: -10rem;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(80,140,210,0.12),
-        transparent 72%
-    );
-
-    filter: blur(30px);
-
-    pointer-events: none;
-}
-
-.recommend::after{
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    background:
-    linear-gradient(
-        180deg,
-        rgba(255,255,255,0.015),
-        transparent 20%,
-        transparent 80%,
-        rgba(0,0,0,0.18)
-    );
-
-    pointer-events: none;
-}
-
-.recommend:hover{
-    transform:
-    translateY(-6px)
-    scale(1.01);
-
-    border: 1px solid rgba(140,192,235,0.12);
-
-    box-shadow:
-    0 35px 90px rgba(0,0,0,0.78),
-    0 0 40px rgba(80,140,210,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.04);
-}
 
 .recommendTop{
     width: 100%;

@@ -36,7 +36,7 @@ export default component$(() => {
                             <CodeSnippet text="Svelte" icon="/images/svelte.webp"/>
                             <CodeSnippet text="Qwik" icon="/images/qwik.webp"/>
                             <CodeSnippet text="Python" icon="/images/python.webp"/>
-                            <CodeSnippet text="C" icon="/images/C.png"/>
+                            <CodeSnippet text="C" icon="/images/C.webp"/>
                         </div>
                     </div>
                     <div class="aboutMeRight">
