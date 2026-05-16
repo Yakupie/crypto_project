@@ -32,6 +32,7 @@ export default component$(() => {
 <div class="hamburgerMenuArea">
   <button
     id="hamburgerMenu"
+    aria-label="Open navigation menu"
     onClick$={() => (isOpen.value = !isOpen.value)}
   >
     {isOpen.value ? <CloseIcon /> : <MenuIcon />}
@@ -49,7 +50,7 @@ export default component$(() => {
           </ul>
 
           <a class="buttonA" href="https://github.com/Yakupie" target="_blank">
-            <button id="hamburgerMenuButton">
+            <button id="hamburgerMenuButton" >
               <GithubIcon /> Github
             </button>
           </a>

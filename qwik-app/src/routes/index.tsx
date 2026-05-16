@@ -3,12 +3,21 @@ import {
   useSignal,
   useVisibleTask$
 } from "@builder.io/qwik";
-
+import type { DocumentHead } from "@builder.io/qwik-city";
 import Navbar from "~/components/navbar/navbar";
 import MainPageTextComponent from '~/components/mainPageTextComponent/mainPageTextComponent';
 
 import './index.css';
 
+export const head: DocumentHead = {
+  title: "Canlı Kripto Analizi",
+  meta: [
+    {
+      name: "description",
+      content: "Kripto Ve Algoritma İçerikleri",
+    },
+  ],
+};
 export default component$(() => {
 
   const mouseX = useSignal(0);
@@ -29,7 +38,7 @@ export default component$(() => {
   });
 
   return (
-    <div class="container">
+    <main class="container">
 
       <div
         class="mouseGlow"
@@ -44,6 +53,6 @@ export default component$(() => {
       <MainPageTextComponent/>
       </div>
 
-    </div>
+    </main>
   );
 });
