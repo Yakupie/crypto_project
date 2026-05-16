@@ -14,6 +14,10 @@ Sitemden bazı görseller :
 
 
 
+Sitede API Sorunu var ücretsiz api sürümünü kullandığım için arada server hata veriyor bende o yüzden hata sayfası yaptım tatlı bi tane
+<img src="screenshoots/photo7.png" width="700"/>
+
+
 
 Siteyi yaparken kullandığım Qwik kütüphanesi sayesinde performans olarak çok üst düzey bir başarı gerçekleştirebiliyor ( Kriptolar sayfasında performans kötü olabilir 1.000'e yakın veri çekiyorum api den). Google LightHouse Skor Testi : 
 
