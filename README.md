@@ -14,8 +14,23 @@ Sitemden bazı görseller :
 
 
 
+
+
+
+
+
+
 Sitede API Sorunu var ücretsiz api sürümünü kullandığım için arada server hata veriyor bende o yüzden hata sayfası yaptım tatlı bi tane
+
+
+
 <img src="screenshoots/photo7.png" width="700"/>
+
+
+
+
+
+
 
 
 
@@ -30,6 +45,10 @@ Verileri canlı olarak çekerken "CoinGecko" API'Sini kullandım. O api üzerind
 
 
 <img src="screenshoots/photo5.png" width="700"/>
+
+
+
+
 
 
 
