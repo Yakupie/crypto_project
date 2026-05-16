@@ -7,6 +7,9 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    contain: layout paint;
+    content-visibility: auto;
+    contain-intrinsic-size: 500px;
 }
 
 .recommend::before {
@@ -45,6 +48,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20%;
+    display: block;
 }
 
 
@@ -80,6 +84,7 @@
     overflow-y: auto;
     position: relative;
     z-index: 2;
+    will-change: scroll-position;
 }
 
 .recommendBottom::-webkit-scrollbar {
