@@ -10,7 +10,7 @@ export default component$(() => {
   const loading = useSignal(true);
 
   useVisibleTask$(async () => {
-    const res = await fetch("http://127.0.0.1:8000/coins");
+    const res = await fetch("https://crypto-project-gpfr.onrender.com/coins");
     const data = await res.json();
 
     coinsData.value = data;
@@ -32,7 +32,6 @@ export default component$(() => {
 
       <div class="bestContainer">
 
-        {/* 🔥 TOP GAINERS */}
         <RecommendComponent
           title="En Çok Kazandıran Coinler"
           text="Son 24 saatte en yüksek yükseliş"
@@ -45,7 +44,6 @@ export default component$(() => {
           }))}
         />
 
-        {/* 🏦 MARKET CAP */}
         <RecommendComponent
           title="En Popüler Kriptolar"
           text="Market cap’e göre sıralama"
@@ -58,7 +56,6 @@ export default component$(() => {
           }))}
         />
 
-        {/* ⚡ MOVERS */}
         <RecommendComponent
           title="Piyasada Öne Çıkanlar"
           text="En çok hareket eden coinler"
