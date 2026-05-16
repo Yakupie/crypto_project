@@ -23,19 +23,19 @@ export default component$(() => {
                     <div class="aboutMeLeft">
                         <div class="aboutMeLeftTop">
                             <div class="photoArea">
-                                <img src="https://github.com/Yakupie.png" alt="profileIcon"></img>
+                                <img src="/images/pp.webp" alt="profileIcon"></img>
                             </div>
                             <div class="photoHeader">Yakup Döğer</div>
                             <div class="photoText">Full-Stack Web Developer</div>
                         </div>
                         <div class="aboutMeLeftBottom">
-                            <CodeSnippet text="HTML" icon="/images/html.png"/>
-                            <CodeSnippet text="CSS" icon="/images/css.png"/>
-                            <CodeSnippet text="JavaScript" icon="/images/js.png"/>
-                            <CodeSnippet text="PHP" icon="/images/php.png"/>
-                            <CodeSnippet text="Svelte" icon="/images/svelte.png"/>
-                            <CodeSnippet text="Qwik" icon="/images/qwik.png"/>
-                            <CodeSnippet text="Python" icon="/images/python.png"/>
+                            <CodeSnippet text="HTML" icon="/images/html.webp"/>
+                            <CodeSnippet text="CSS" icon="/images/css.webp"/>
+                            <CodeSnippet text="JavaScript" icon="/images/js.webp"/>
+                            <CodeSnippet text="PHP" icon="/images/php.webp"/>
+                            <CodeSnippet text="Svelte" icon="/images/svelte.webp"/>
+                            <CodeSnippet text="Qwik" icon="/images/qwik.webp"/>
+                            <CodeSnippet text="Python" icon="/images/python.webp"/>
                             <CodeSnippet text="C" icon="/images/C.png"/>
                         </div>
                     </div>
