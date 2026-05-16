@@ -33,3 +33,10 @@ API'yi deploy ettiğim netlify üzerinden erişebilmek için railway ile interne
 
 
 <img src="screenshoots/photo6.png" width="700"/>
+
+
+
+Netlify ile görmek isteyenler icin :
+https://algoritmaodevim.netlify.app/
+
+Sitemde responsive tasarım falan da var mobill uyumlu yani. Yapay zekadan sadece API konusunda yardım aldımm çünkü onu yapmayı bilmiyordum.Tasarım konusunda çok üst düzey bir şey gerçekleştirmedim proje sonucta önemli olan API leri falan öğrenmekti benim için
