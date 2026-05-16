@@ -1,18 +1,29 @@
 import { component$ } from "@builder.io/qwik";
 import Navbar from "~/components/navbar/navbar";
 import { CodeSnippet } from "~/components/codeSnippet/codeSnippet";
+import { DocumentHead } from "@builder.io/qwik-city";
 import './index.css';
+
+export const head: DocumentHead = {
+    title : "Hakkımda",
+    meta : [
+        {
+            name: "description",
+            content: "About Me Page",
+        },
+    ]
+}
 
 export default component$(() => {
     return (
-        <div class="aboutContainer">
+        <main class="aboutContainer">
             <Navbar/>
             <div class="aboutWrapper">
                 <div class="aboutMe">
                     <div class="aboutMeLeft">
                         <div class="aboutMeLeftTop">
                             <div class="photoArea">
-                                <img src="https://github.com/Yakupie.png"></img>
+                                <img src="https://github.com/Yakupie.png" alt="profileIcon"></img>
                             </div>
                             <div class="photoHeader">Yakup Döğer</div>
                             <div class="photoText">Full-Stack Web Developer</div>
@@ -42,6 +53,6 @@ I enjoy building responsive user interfaces, developing backend systems, and con
 </div>
                 </div>
             </div>
-        </div>
+        </main>
     )
 })

@@ -10,7 +10,7 @@ export const CodeSnippet = component$<CodeSnippetProps>(({ text, icon }) => {
     return (
         <div class="codeSnippet">
             <div class="iconArea">
-                <img src={icon} />
+                <img src={icon} alt="languageIcon" />
             </div>
 
             <span class="snippetText">
