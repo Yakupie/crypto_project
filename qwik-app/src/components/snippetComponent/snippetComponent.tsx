@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import "./snippetComponent.css";
+import { formatNumber } from "../../utilis/formatNumber";
 
 interface CoinProps {
   name: string;
@@ -31,7 +32,7 @@ export const CoinSnippet = component$<CoinProps>(
         </div>
 
         <div class="coinCell">
-          ${price}
+          ${formatNumber(price)}
         </div>
 
         <div class={`coinCell ${isPositive ? "up" : "down"}`}>
@@ -39,17 +40,16 @@ export const CoinSnippet = component$<CoinProps>(
         </div>
 
         <div class="coinCell">
-          {volume ? `$${volume.toLocaleString()}` : "-"}
+          {volume ? `$${formatNumber(volume)}` : "-"}
         </div>
 
         <div class="coinCell">
-          {marketCap ? `$${marketCap.toLocaleString()}` : "-"}
+          {marketCap ? `$${formatNumber(marketCap)}` : "-"}
         </div>
 
         <div class="coinCell">
           {peRatio ? peRatio.toFixed(2) : "-"}
         </div>
-
       </div>
     );
   }

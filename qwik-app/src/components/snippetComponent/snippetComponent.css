@@ -50,8 +50,8 @@
 }
 
 .coinIcon img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
 }
 
 .coinInfo {
@@ -84,6 +84,9 @@
 .coinChange.down {
     color: #fb7185;
 }
+.coinRight {
+  display: contents;
+}
 
 @media (max-width: 1024px) {
     .coinSnippet {
@@ -104,14 +107,21 @@
 }
 
 @media (max-width: 768px) {
-    .coinSnippet {
-        height: auto;
-        padding: 12px;
-    }
+  .coinSnippet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .coinLeft {
+    width: 100%;
+    justify-content: space-between;
+  }
 
     .coinIcon {
-        width: 28px;
-        height: 28px;
+        width: 50px;
+        height: 50px;
     }
 
     .coinIcon img {
@@ -120,7 +130,7 @@
     }
 
     .coinName {
-        font-size: 0.9rem;
+        font-size: 5rem;
     }
 
     .coinPrice {
@@ -139,10 +149,20 @@
         height: 25%;
     }
 
-    .coinName {
-        font-size: 0.85rem;
+    .coinLeft{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
     }
-
+    .coinName {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
     .coinPrice {
         font-size: 0.65rem;
     }
@@ -150,4 +170,8 @@
     .coinChange {
         font-size: 0.85rem;
     }
+    .coinIcon img {
+    width: 40px;
+    height: 40px;
+}
 }

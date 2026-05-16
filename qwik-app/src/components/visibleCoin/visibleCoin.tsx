@@ -39,17 +39,20 @@ export const VisibleCoin = component$((props: { coin: any }) => {
     <div ref={containerRef}>
 
       {visible.value ? (
-        <CoinSnippet
-          key={props.coin.id}
-          name={props.coin.name}
-          price={props.coin.price}
-          degisim={props.coin.change24h}
-          icon={props.coin.image}
-        />
+<CoinSnippet
+  key={props.coin.id}
+  name={props.coin.name}
+  price={props.coin.price}
+  degisim={props.coin.change24h}
+  icon={props.coin.image}
+  volume={props.coin.volume}
+  marketCap={props.coin.marketCap}
+  peRatio={props.coin.peRatio}
+/>
       ) : (
         <div
           style={{
-            height: "70px",
+            height: "160px",
           }}
         />
       )}
