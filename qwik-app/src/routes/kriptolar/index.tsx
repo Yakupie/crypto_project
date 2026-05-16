@@ -2,7 +2,18 @@ import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import Navbar from "~/components/navbar/navbar";
 import { RecommendComponent } from "~/components/recommend/recommend";
 import LeaderBoard from "~/components/leaderboard/leaderBoard";
+import type { DocumentHead } from "@builder.io/qwik-city";
 import "./index.css";
+
+export const head: DocumentHead = {
+  title: "Kripto Verileri",
+  meta: [
+    {
+      name: "description",
+      content: "Modern crypto dashboard built with Qwik",
+    },
+  ],
+};
 
 export default component$(() => {
 
@@ -27,7 +38,7 @@ export default component$(() => {
   const data = coinsData.value;
 
   return (
-    <div class="container">
+    <main class="container">
       <Navbar />
 
       <div class="bestContainer">
@@ -76,6 +87,6 @@ export default component$(() => {
       <div class="containerTwo">
         <LeaderBoard coins={data.all ?? []} />
       </div>
-    </div>
+    </main>
   );
 });

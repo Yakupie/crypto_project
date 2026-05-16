@@ -53,21 +53,21 @@ export default component$((props: { coins: any[] }) => {
 
           <div class="pillGroup">
 
-            <button
+            <button aria-label="Artan"
               class={`pill ${sort.value === "asc" ? "active" : ""}`}
               onClick$={() => (sort.value = "asc")}
             >
               Artan
             </button>
 
-            <button
+            <button aria-label="Azalan"
               class={`pill ${sort.value === "desc" ? "active" : ""}`}
               onClick$={() => (sort.value = "desc")}
             >
               Azalan
             </button>
 
-            <button
+            <button aria-label="Populer"
               class={`pill ${sort.value === "popular" ? "active" : ""}`}
               onClick$={() => (sort.value = "popular")}
             >
@@ -89,12 +89,12 @@ export default component$((props: { coins: any[] }) => {
 
         <div class="leaderBoardTopRight">
           <div class="timeGroup">
-            <button class="timePill active">1G</button>
-            <button class="timePill">1H</button>
-            <button class="timePill">1A</button>
-            <button class="timePill">3A</button>
-            <button class="timePill">1Y</button>
-            <button class="timePill">5Y</button>
+            <button aria-label="1g" class="timePill active">1G</button>
+            <button aria-label="1h" class="timePill">1H</button>
+            <button aria-label="1a" class="timePill">1A</button>
+            <button aria-label="3a" class="timePill">3A</button>
+            <button aria-label="1y" class="timePill">1Y</button>
+            <button aria-label="5y" class="timePill">5Y</button>
           </div>
         </div>
 

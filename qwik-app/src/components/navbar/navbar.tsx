@@ -6,7 +6,7 @@ export default component$(() => {
 
   return (
     <>
-      <div class="navbar">
+      <nav class="navbar" aria-label="Main navigation">
         <div class="logoArea">
           <div class="logo">
             Crypto<span id="logoSpan">Stats</span>
@@ -38,7 +38,7 @@ export default component$(() => {
     {isOpen.value ? <CloseIcon /> : <MenuIcon />}
   </button>
 </div>
-      </div>
+      </nav>
 
       {isOpen.value && (
         <div class="mobileMenu">
