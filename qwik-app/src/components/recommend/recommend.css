@@ -1,155 +1,274 @@
-.recommend {
+.recommend{
     width: 30%;
-    height: 60vh;
-background: rgba(255,255,255,0.005);
-    border: 1px solid rgba(140, 192, 235, 0.12);
-    border-radius: 1rem;
-    overflow: hidden;
+    height: 62vh;
+
     position: relative;
-    z-index: 1;
-    contain: layout paint;
-    content-visibility: auto;
-    contain-intrinsic-size: 500px;
+
+    overflow: hidden;
+
+    border-radius: 2rem;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(10,12,18,0.96) 0%,
+        rgba(7,9,14,0.98) 100%
+    );
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,0.65),
+    0 0 30px rgba(0,0,0,0.95),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
 }
 
-.recommend::before {
+.recommend::before{
     content: "";
+
     position: absolute;
-    inset: 0;
+
+    width: 22rem;
+    height: 22rem;
+
+    top: -12rem;
+    right: -10rem;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(80,140,210,0.12),
+        transparent 72%
+    );
+
+    filter: blur(30px);
+
     pointer-events: none;
 }
 
-.recommendTop {
+.recommend::after{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,0.015),
+        transparent 20%,
+        transparent 80%,
+        rgba(0,0,0,0.18)
+    );
+
+    pointer-events: none;
+}
+
+.recommend:hover{
+    transform:
+    translateY(-6px)
+    scale(1.01);
+
+    border: 1px solid rgba(140,192,235,0.12);
+
+    box-shadow:
+    0 35px 90px rgba(0,0,0,0.78),
+    0 0 40px rgba(80,140,210,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.recommendTop{
     width: 100%;
     height: 30%;
+
     display: flex;
-    padding: 1.4rem;
-    gap: 1.2rem;
+
+    padding: 1.7rem;
+
+    gap: 1.3rem;
+
     position: relative;
     z-index: 2;
 }
 
-.recommendTopLeft {
+.recommendTopLeft{
     width: 30%;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.photo {
+.photo{
     width: 6.2rem;
     height: 6.2rem;
-    border-radius: 20%;
-    border: 1px solid rgba(180, 220, 255, 0.18);
+
+    border-radius: 1.4rem;
+
+    overflow: hidden;
+
     position: relative;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.01)
+    );
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,0.45),
+    0 0 20px rgba(80,140,210,0.08);
 }
-.photo img {
+
+.photo img{
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    border-radius: 20%;
+
+    border-radius: 1.4rem;
+
     display: block;
 }
 
-
-.recommendTopRight {
+.recommendTopRight{
     width: 70%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.4rem;
+
+    gap: 0.55rem;
 }
 
-.recommendHeader {
-    font-size: 1.5rem;
-    color: white;
+.recommendHeader{
+    font-size: 1.55rem;
+    font-weight: 700;
+
+    color: rgba(255,255,255,0.96);
+
     font-family: 'Montserrat', sans-serif;
-    background-size: 300% 100%;
+
+    letter-spacing: -0.03rem;
+
+    line-height: 1.2;
 }
 
-.recommendText {
+.recommendText{
     font-family: 'Open Sans', sans-serif;
+
     font-size: 0.9rem;
-    color: rgba(200, 220, 240, 0.55);
+
+    line-height: 1.6rem;
+
+    color: rgba(255,255,255,0.45);
 }
 
-.recommendBottom {
-    height: 70%;
+.recommendBottom{
     width: 100%;
-    padding: 1rem 1.2rem;
+    height: 70%;
+
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+
+    gap: 0.8rem;
+
+    padding:
+    1rem
+    1.4rem
+    1.4rem
+    1.4rem;
+
     overflow-y: auto;
+
     position: relative;
     z-index: 2;
-    will-change: scroll-position;
 }
 
-.recommendBottom::-webkit-scrollbar {
+.recommendBottom::-webkit-scrollbar{
     width: 5px;
 }
 
-.recommendBottom::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        180deg,
-        rgba(140, 192, 235, 0.15),
-        rgba(140, 192, 235, 0.35)
-    );
-    border-radius: 20px;
+.recommendBottom::-webkit-scrollbar-track{
+    background: transparent;
 }
 
-.recommendBottom::-webkit-scrollbar-thumb:hover {
-    background: rgba(140, 192, 235, 0.5);
+.recommendBottom::-webkit-scrollbar-thumb{
+    background:
+    rgba(255,255,255,0.10);
+
+    border-radius: 999px;
 }
-@media (max-width: 1024px) {
-    .recommend {
+
+.recommendBottom::-webkit-scrollbar-thumb:hover{
+    background:
+    rgba(140,192,235,0.25);
+}
+
+@media (max-width: 1024px){
+
+    .recommend{
         width: 80%;
-        height: 55vh;
+        height: 56vh;
     }
 }
 
-@media (max-width: 768px) {
-    .recommend {
+@media (max-width: 768px){
+
+    .recommend{
         width: 92%;
         height: 60vh;
+
         border-radius: 2rem;
     }
 
-    .recommendHeader {
+    .recommendTop{
+        padding: 1.2rem;
+    }
+
+    .recommendHeader{
         font-size: 1.2rem;
     }
 
-    .recommendText {
-        font-size: 0.85rem;
+    .recommendText{
+        font-size: 0.82rem;
+        line-height: 1.45rem;
     }
 
-    .photo {
+    .photo{
         width: 5rem;
         height: 5rem;
     }
 }
 
-@media (max-width: 480px) {
-    .recommend {
-        width: 95%;
-        height: 65vh;
+@media (max-width: 480px){
+
+    .recommend{
+        width: 96%;
+        height: 64vh;
     }
 
-    .recommendTop {
-        padding: 1rem;
+    .recommendHeader{
+        font-size: 1rem;
     }
 
-    .recommendHeader {
-        font-size: 1.05rem;
+    .recommendText{
+        font-size: 0.76rem;
     }
 
-    .recommendText {
-        font-size: 0.8rem;
-    }
-
-    .photo {
-        width: 4.2rem;
-        height: 4.2rem;
+    .photo{
+        width: 4.3rem;
+        height: 4.3rem;
     }
 }

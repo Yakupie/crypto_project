@@ -1,4 +1,5 @@
 import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { useNavigate } from "@builder.io/qwik-city";
 import Navbar from "~/components/navbar/navbar";
 import { RecommendComponent } from "~/components/recommend/recommend";
 import LeaderBoard from "~/components/leaderboard/leaderBoard";
@@ -16,14 +17,36 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
-
   const coinsData = useSignal<any>(null);
   const loading = useSignal(true);
 
+  const nav = useNavigate();
+
   useVisibleTask$(async () => {
-    const res = await fetch("https://cryptoproject-production-0c1f.up.railway.app/coins");
-    coinsData.value = await res.json();
-    loading.value = false;
+    try {
+      const res = await fetch(
+        "https://cryptoproject-production-0c1f.up.railway.app/coins"
+      );
+
+      if (!res.ok) {
+        throw new Error("API response not ok");
+      }
+
+      const data = await res.json();
+
+      if (!data) {
+        throw new Error("No data received");
+      }
+
+      coinsData.value = data;
+    } catch (err) {
+      console.error("API Error:", err);
+
+      nav("/hata");
+      return;
+    } finally {
+      loading.value = false;
+    }
   });
 
   if (loading.value || !coinsData.value) {
@@ -42,7 +65,6 @@ export default component$(() => {
       <Navbar />
 
       <div class="bestContainer">
-
         <RecommendComponent
           title="En Çok Kazandıran Coinler"
           text="Son 24 saatte en yüksek yükseliş"
@@ -52,7 +74,7 @@ export default component$(() => {
             name: c.name,
             price: c.price,
             degisim: c.change24h ?? 0,
-            image: c.image
+            image: c.image,
           }))}
         />
 
@@ -65,7 +87,7 @@ export default component$(() => {
             name: c.name,
             price: c.price,
             degisim: c.change24h ?? 0,
-            image: c.image
+            image: c.image,
           }))}
         />
 
@@ -78,10 +100,9 @@ export default component$(() => {
             name: c.name,
             price: c.price,
             degisim: c.change24h ?? 0,
-            image: c.image
+            image: c.image,
           }))}
         />
-
       </div>
 
       <div class="containerTwo">

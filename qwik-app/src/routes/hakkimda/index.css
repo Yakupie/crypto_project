@@ -21,10 +21,25 @@
 
     background: rgba(255,255,255,0.02);
 
-    border: 1px solid rgba(140, 192, 235, 0.12);
+    border: 1px solid rgba(140, 192, 235, 0.05);
 
 
     overflow: hidden;
+    animation: floatingCard 5s ease-in-out infinite;
+}
+@keyframes floatingCard{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
 }
 .aboutMeLeft{
     width: 38%;
@@ -121,8 +136,46 @@
     color: white;
 
     font-family: 'Montserrat', sans-serif;
-
+    position: relative;
     margin-bottom: 1.3rem;
+}
+.aboutTitle::after{
+    content: "";
+
+    position: absolute;
+
+    bottom: -0.5rem;
+    left: 0;
+
+    width: 70%;
+    height: 4px;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #8CC0EB,
+        transparent
+    );
+     animation: lineGlow 2.5s ease-in-out infinite;
+}
+@keyframes lineGlow{
+
+    0%{
+        width: 20%;
+        opacity: 0.5;
+    }
+
+    50%{
+        width: 80%;
+        opacity: 1;
+    }
+
+    100%{
+        width: 20%;
+        opacity: 0.5;
+    }
 }
 .aboutDescription{
     width: 95%;

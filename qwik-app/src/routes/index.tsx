@@ -6,6 +6,7 @@ import {
 import type { DocumentHead } from "@builder.io/qwik-city";
 import Navbar from "~/components/navbar/navbar";
 import MainPageTextComponent from '~/components/mainPageTextComponent/mainPageTextComponent';
+import Footer from "~/components/footer/footer";
 
 import './index.css';
 
@@ -52,7 +53,6 @@ export default component$(() => {
       <div class="containerIndex">
       <MainPageTextComponent/>
       </div>
-
     </main>
   );
 });
