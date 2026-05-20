@@ -49,15 +49,6 @@ export default component$(() => {
     }
   });
 
-  if (loading.value || !coinsData.value) {
-    return (
-      <div class="container">
-        <Navbar />
-        <div>Loading...</div>
-      </div>
-    );
-  }
-
   const data = coinsData.value;
 
   return (
