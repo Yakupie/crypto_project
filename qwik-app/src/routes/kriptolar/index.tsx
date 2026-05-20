@@ -49,6 +49,12 @@ export default component$(() => {
     }
   });
 
+  if (loading.value || !coinsData.value) {
+    return (
+      nav("/hata")
+    );
+  }
+
   const data = coinsData.value;
 
   return (
