@@ -19,6 +19,7 @@ export const head: DocumentHead = {
 export default component$(() => {
   const coinsData = useSignal<any>(null);
   const loading = useSignal(true);
+  const error = useSignal(false);
 
   const nav = useNavigate();
 
@@ -41,18 +42,29 @@ export default component$(() => {
       coinsData.value = data;
     } catch (err) {
       console.error("API Error:", err);
-
-      nav("/hata");
-      return;
+      error.value = true;
     } finally {
       loading.value = false;
     }
   });
 
-  if (loading.value || !coinsData.value) {
+  useVisibleTask$(() => {
+    if (!loading.value && (error.value || !coinsData.value)) {
+      nav("/hata");
+    }
+  });
+
+  if (loading.value) {
     return (
-      nav("/hata")
+      <main class="container">
+        <Navbar />
+        <div style={{ padding: "20px" }}>Yükleniyor...</div>
+      </main>
     );
+  }
+
+  if (!coinsData.value) {
+    return null;
   }
 
   const data = coinsData.value;
@@ -66,7 +78,7 @@ export default component$(() => {
           title="En Çok Kazandıran Coinler"
           text="Son 24 saatte en yüksek yükseliş"
           icon="/images/photo1.webp"
-          coins={(data.top_gainers ?? []).map((c: any) => ({
+          coins={(data?.top_gainers ?? []).map((c: any) => ({
             id: c.id,
             name: c.name,
             price: c.price,
@@ -79,7 +91,7 @@ export default component$(() => {
           title="En Popüler Kriptolar"
           text="Market cap’e göre sıralama"
           icon="/images/photo2.webp"
-          coins={(data.top_marketcap ?? []).map((c: any) => ({
+          coins={(data?.top_marketcap ?? []).map((c: any) => ({
             id: c.id,
             name: c.name,
             price: c.price,
@@ -92,7 +104,7 @@ export default component$(() => {
           title="En Çok Değişen Coinler"
           text="24 saatte en volatil coinler"
           icon="/images/photo3.webp"
-          coins={(data.top_movers ?? []).map((c: any) => ({
+          coins={(data?.top_movers ?? []).map((c: any) => ({
             id: c.id,
             name: c.name,
             price: c.price,
@@ -103,7 +115,7 @@ export default component$(() => {
       </div>
 
       <div class="containerTwo">
-        <LeaderBoard coins={data.all ?? []} />
+        <LeaderBoard coins={data?.all ?? []} />
       </div>
     </main>
   );
